@@ -1,11 +1,5 @@
 # Peter Suk
-I am currently in my third year at Indiana University Bloomington majoring in B.S Informatics. I am interested in variety of different topics in informatics and data science. I love experiencing different topics and communicating with people. 
+I am currently in my fourth year at Indiana University Bloomington studying B.S in Informatics. I have interests in web design and development, artificial intelligence and machine learning.  
 
 # Education
 - B.S in Informatics, Indiana University Bloomington
-- Kwangju Foreign School
-
-# Hobbies
-- Basketball
-- Weightlifting
-- Piano
