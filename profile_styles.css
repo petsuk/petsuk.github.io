@@ -1,0 +1,721 @@
+
+/* Overall body styling */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    background-color: white;
+    z-index: 1000;
+    top: 0; /* Aligns the navbar to the top */
+    left: 0; /* Aligns the navbar to the left */
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+}
+
+/* body {
+    padding-top: 70px; /* Adjust this value to match the height of your navbar */
+    /* align-items: center;
+} */ 
+
+.nav-item {
+    margin-right: 10px;
+    position: relative;
+}
+
+.profile-btn {
+    background-color: #4BF6BA;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profile-btn:hover {
+    background-color: #40a296;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-btn:hover {
+    color: #40a296;
+}
+
+.nav-indicator {
+    height: 2px;
+    background-color: #4BF6BA;
+    width: 100%;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    display: none;
+}
+
+/* #saved-btn:focus + #saved-indicator,
+#saved-indicator.active,
+#for-you-btn:focus + .nav-indicator,
+.selected .nav-indicator {
+    display: block;
+} */
+
+#saved-btn:focus + #saved-indicator,
+#saved-indicator.active,
+#for-you-btn:focus + .nav-indicator,
+.selected .nav-indicator,
+.profile-btn:focus + .profile-indicator, /* Assuming there's a .profile-indicator that should be shown when .profile-btn is focused */
+.profile-indicator.active { /* Assuming .profile-indicator should also be shown when it has the .active class */
+    display: block;
+}
+
+
+
+.search-bar {
+    flex-grow: 1;
+    padding: 0 15px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.search-bar input:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    width: 40px; 
+    height: auto;
+}
+
+.generate-btn {
+    background-color: #4BF6BA;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.generate-btn:hover {
+    background-color: #40a296;
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9; /* Light grey background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+hr.new1 {
+    border: 2px solid #4bf6ba;
+    border-radius: 5px;
+}
+
+/* Container for the entire video gallery */
+.video-gallery {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.Likes-gallery {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+/* Style for the user's username and edit icon */
+/* .username-edit {
+    font-size: 24px; 
+    color: #333; 
+    margin-bottom: 15px; 
+} */
+
+.username-edit {
+    position: relative; 
+    top: 30px; 
+    left: 50px; 
+}
+/* Container for likes, ensuring it's inline with recipes */
+/* .like-edit, .recipe-count-edit {
+    display: inline-block;
+    margin-top: 100px;
+    top: 100px;
+    vertical-align: top;
+    margin: 0 10px;
+} */
+.like-edit, .recipe-count-edit {
+    position: relative; 
+    top: 30px; 
+    left: 50px; 
+}
+
+.userProfile {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.flex-container-vid {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto;
+    width: 900px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+    
+
+.flex-item {
+      flex: 1;
+      padding: 10px;
+}
+
+.clipb-content {
+    flex-shrink: 0; /* Prevent the wrapper from shrinking */
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    font-family: 'Futura', sans-serif;
+    width: 450px;
+    margin: auto;
+}
+
+.vid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.edit-video-link {
+    right: 0;
+    background-color: #4BF6BA;
+    border: none;
+    border-radius: 5px;
+    padding: 1px 5px;
+    color: white;
+}
+
+.edit-video-link:hover{
+    background-color: #40a296;
+}
+
+.image-button {
+    background-color:rgba(228, 222, 222, 0.7);; /* Light green background */
+    color: white; /* White plus sign */
+    border: none; /* Remove default border */
+    border-radius: 50%; /*Make it round */
+    width: 5px; /* Size of the button */
+    height: 5px; /* Size of the button */
+    font-size: 5px; /* Size of the plus sign */
+    line-height: 5px; /* Center the plus sign vertically */
+    text-align: right; /* Center the plus sign horizontally */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-left: auto; /* Push the button to the right */
+    display: flex; /* Use flexbox to center content */
+    justify-content: right; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-left: 5px; /* Add some space between the title and the button */
+}
+
+.dow-button {
+    background-color:rgba(228, 222, 222, 0.7);; /* Light green background */
+    color: white; /* White plus sign */
+    border: none; /* Remove default border */
+    border-radius: 5%; /*Make it round */
+    width: 200px; /* Size of the button */
+    height: 450px; /* Size of the button */
+    font-size: 16px; /* Size of the plus sign */
+    line-height: 40px; /* Center the plus sign vertically */
+    text-align: center; /* Center the plus sign horizontally */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-left: auto; /* Push the button to the right */
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-left: 16px; /* Add some space between the title and the button */
+}
+
+.dow-button-selected {
+    background-color: #4BF6BA; /* Light green background */
+    color: white; /* White plus sign */
+    border: none; /* Remove default border */
+    border-radius: 50%; /* Make it round */
+    width: 40px; /* Size of the button */
+    height: 40px; /* Size of the button */
+    font-size: 16px; /* Size of the plus sign */
+    line-height: 40px; /* Center the plus sign vertically */
+    text-align: center; /* Center the plus sign horizontally */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-left: auto; /* Push the button to the right */
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-left: 16px; /* Add some space between the title and the button */
+}
+
+.dow-button:hover {
+    background-color: #40a296;
+}
+
+/* Edit video page */
+
+.clipb-top-edit {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    border-radius: 25px;
+    font-family: 'Futura', sans-serif;
+    width: 450px;
+    margin: auto;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.flex-container-edit {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.flex-container-edit-profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+}
+
+.flex-container-edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+}
+
+.flex-item-edit {
+    flex: 1;
+    padding: 10px;
+}
+
+.video-item-edit {
+    width: 250px; /* Fixed width for video items */
+    margin: 20px; /* Spacing around video items */
+    display: inline-block; /* Align items side by side */
+    vertical-align: top;
+}
+
+.video-item-edit:hover .video-thumbnail {
+    transform: scale(1.03); /* Slight zoom effect on hover */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for the zoom effect */
+}
+
+.edit-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4BF6BA; /* Green background */
+    color: white; /* White text */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+}
+
+.edit-button:hover {
+    background-color: #40a296; /* Darker shade of green for hover effect */
+}
+
+
+/* Upload page */
+
+.clipb-top-upload {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    border-radius: 25px;
+    font-family: 'Futura', sans-serif;
+    width: 450px;
+    margin: auto;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.flex-container-upload-profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+}
+
+.flex-container-upload {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.flex-item-uploads {
+    flex: 1;
+    padding: 10px;
+}
+
+.flex-item-upload {
+    flex: 1;
+    background: #fff;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+
+/* upload new video */
+/* Style for ingredient inputs */
+.ingredient-group {
+    margin-bottom: 10px;
+}
+
+.ingredient-group input[type="text"],
+.ingredient-group input[type="number"] {
+    padding: 5px;
+    margin-right: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.ingredient-group button {
+    padding: 5px 10px;
+    background-color: #ff4b4b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ingredient-group button:hover {
+    background-color: #ff2e2e;
+}
+
+/* Upload profile Picture */
+.profile-pic-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic-container h3 {
+    margin-bottom: 20px;
+}
+
+.current-profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4BF6BA;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #40a296;
+}
+
+
+
+/* Logout styles */
+.logout-btn {
+    display: inline-block;
+    background-color: red; /* Red */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.logout-btn:hover {
+    background-color: darkred; /* Darker red */
+}
+
+
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Styling input[type="file"] is tricky, it requires specific styles or a custom JS/CSS solution */
+.form-group input[type="file"] {
+    border: none;
+}
+
+.form-group .ingredient-edit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form-group .ingredient-edit input[type="text"] {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.form-group .ingredient-edit span {
+    white-space: nowrap;
+}
+
+/* Submit Button Styles */
+input[type="submit"] {
+    background: #4BF6BA;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+/* Utility Classes */
+.center {
+    text-align: center;
+}
+
+/* Add other styles from your image as necessary */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Individual counters for likes and recipes */
+.count-likes, .count-recipes {
+    font-size: 18px; /* Slightly larger font for counters */
+    color: #333;
+    margin-top: 10px; /* Spacing above counters */
+}
+.video_edit {
+    position: relative; 
+    top: 100px; 
+    left: 50px; 
+}
+/* Styling for individual video items */
+.video-item {
+    width: 250px; /* Fixed width for video items */
+    margin: 20px; /* Spacing around video items */
+    display: inline-block; /* Align items side by side */
+    vertical-align: top;
+}
+
+
+
+/* Thumbnail styling */
+.video-thumbnail {
+    position: relative;
+    width: 100%;
+    cursor: pointer; /* Indicates the item is clickable */
+}
+
+/* Rounded corners for videos */
+.rounded-video {
+    width: 100%;
+    border-radius: 12px; /* Rounded corners for video */
+    overflow: hidden; /* Ensures the video doesn't overflow its border radius */
+}
+
+/* Overlay that appears on the video thumbnail */
+.like-overlay {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+    color: #fff; /* White text for contrast */
+    padding: 5px 10px;
+    border-radius: 15px; /* Rounded corners for overlay */
+    display: flex;
+    align-items: center;
+}
+
+/* Heart icon within the overlay */
+.heart-icon {
+    color: #ff3860; /* Bright color for the heart icon */
+    margin-right: 5px;
+}
+
+/* Video title styling */
+/* .video-title {
+    font-size: 16px; /* Standard font size for titles */
+    /* color: #333; */
+    /* margin-top: 8px; Spacing above titles */
+/* } */ 
+
+.video-title {
+    font-family: 'Futura', sans-serif;
+    font-size: medium;
+    font-weight: lighter;
+    text-align: left;
+    margin-top: 8px;
+}
+
+/* Hover effect for video items */
+.video-item:hover .video-thumbnail {
+    transform: scale(1.03); /* Slight zoom effect on hover */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for the zoom effect */
+}
+
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .video-gallery {
+        width: 95%;
+    }
+
+    .video-item {
+        width: 250%; /* Adjust video item size for small screens */
+    }
+
+    .video-item-edit {
+        width: 250%; /* Adjust video item size for small screens */
+    }
+
+    /* Stacking counters for smaller screens */
+    .like-edit, .recipe-count-edit {
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+
+.add-mp-btn {
+    background-color: #4BF6BA;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-mp-btn:hover {
+    background-color: #40a296;
+}
+
+body {
+    background-image: url('content/background.jpeg'); /* Path to your image */
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Fix the background image position */
+    padding-top: 70px; /* Adjust this value to match the height of your navbar */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    background-color: white;
+    border-radius: 10px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align with the top of the video player */
+    gap: 50px; /* Adjust the space between video and ingredients list as needed left to right difference */
+    padding: 70px;
+    padding-top: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}

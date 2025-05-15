@@ -1,6 +1,2 @@
-# Peter Suk
-Product Designer and Frontend Developer based in USA
-
-# Education
-- B.S in Informatics (HCI), Indiana University Bloomington
-- M.S in Information Systems, Korea University Business School
+# team-30
+This repository was automatically created from Canvas.
