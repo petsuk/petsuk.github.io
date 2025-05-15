@@ -1,5 +1,5 @@
 # Peter Suk
-Product Designer and Frontend Developer based in the United States
+Product Designer and Frontend Developer based in USA
 
 # Education
 - B.S in Informatics (HCI), Indiana University Bloomington
